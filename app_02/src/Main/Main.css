@@ -1,0 +1,14 @@
+.main {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px;
+}
+
+.main {
+    grid-area: m;
+}
+
+section {
+    padding: 10px;
+    margin: 5px;
+}
