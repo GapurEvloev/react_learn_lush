@@ -1,8 +1,13 @@
-import './App.css';
+import React from 'react';
+import { useState } from 'react';
 
+import './App.css';
 
 function App() {
   let a = 5;
+  let textInput = React.createRef();
+  let textOut = React.createRef();
+  const [output, setOutput] = useState('hello');
 
   function f1(arg) {
     console.log("f1 work" + a + arg);
@@ -17,7 +22,10 @@ function App() {
   function showInput(event) {
     // console.log("input");
     // console.log(this.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    console.log(textInput.current.value);
+    textOut.current.innerHTML = textInput.current.value;
+    setOutput(textInput.current.value);
   }
 
   return (
@@ -33,7 +41,9 @@ function App() {
       </section>
       <section>
         <h2>Input</h2>
-        <input type="text" onInput={showInput} />
+        <input type="text" onInput={showInput} ref={textInput} defaultValue='hi' />
+        <p ref={textOut} ></p>
+        <h3>{output}</h3>
       </section>
     </div>
   );
