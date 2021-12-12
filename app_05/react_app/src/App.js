@@ -1,5 +1,5 @@
 import Comp1 from './Comp1';
-// import Comp2 from './Comp1';
+import Comp2 from './Comp1';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Comp1/>
       <hr />
-      {/* <Comp2/> */}
+      <Comp2/>
     </div>
   );
 }
